@@ -1,0 +1,48 @@
+@use './mixins' as m;
+@use './variables' as v;
+@use './shapes';
+@use './header';
+@use './modal';
+@use './contactList';
+@use './contactDetails';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size:14px;
+}
+
+#App {
+    width:100vw;
+    height:100vh;
+    background-color: #000000;
+    font-family: v.$font;
+    @include m.flex-box(center, row);
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, v.$purple 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+.container {
+    width:330px;
+    height:630px;
+    background-color:v.$background;
+    position:relative;
+    overflow: hidden;
+    z-index: 3000;
+
+    @media screen and (max-width: v.$phone) {
+        width:100%;
+        height:100%;
+    }
+}
+
+
+main {
+    width:100%;
+    height:calc(100% - 12%);
+    @include m.flex-box(center, row);
+}
+
+
+    

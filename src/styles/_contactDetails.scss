@@ -1,0 +1,66 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+.each-contact-details {
+    width:100%;
+    height:calc(100% - 12%);
+    left:0;
+    background-color:v.$background;
+    position:absolute;
+    @include m.flex-box(center, row);
+
+    .details {
+        width:90%;
+        height:90%;
+        position: relative;
+        background-color: v.$background;
+    }
+}
+
+.details .back-to-contactList {
+    height:10%;
+    width:100%;
+        
+    a {
+        color:v.$purple;
+    }
+}
+
+.back-to-contactList::before {
+    content: 'Contact Details';
+    position:absolute;
+    top:56%;
+    left:-10%;
+    font-size:3.5rem;
+    color:grey;
+    font-weight: bold;
+    opacity:0.15;
+
+}
+
+.back-to-contactList a:nth-child(2) {
+    margin-left:5px;
+}
+
+.details .each-contact-info {
+    width:100%;
+    @include m.flex-box(center, column);
+}
+
+.each-contact-info .contact-name-and-number {
+    margin-top:30px;
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+
+}
+
+.contact-name-and-number div:nth-child(2) {
+    margin-left:10px;
+}
+
+.contact-name-and-number div {
+    h2,p {
+        margin:10px 0;
+    }
+}

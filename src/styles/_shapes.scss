@@ -1,0 +1,57 @@
+@use './variables' as v;
+
+.circle {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:v.$purple;
+    clip-path: circle(12.7% at 100% 0);
+}
+
+
+.circle-two {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:v.$orange;
+    clip-path: circle(2.4% at 0 20%);
+    border:2px solid red;
+}
+
+.circle-two-reloaded {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:v.$orange;
+    clip-path: circle(6.6% at 100% 70%);
+}
+
+.circle-three {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:v.$purple;
+    clip-path: circle(15.1% at 0 0);
+}
+
+.circle-four {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:v.$orange;
+    clip-path: circle(15.9% at 100% 51%);
+}
+
+.shape {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:#fbc531;
+    clip-path: circle(12.4% at 40% 78%);
+}

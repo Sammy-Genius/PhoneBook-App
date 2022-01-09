@@ -1,0 +1,96 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+main .main-container {
+    width:80%;
+    height:85%;
+    position:relative;
+}
+
+main .main-container .add-wrapper {
+    width:100%;
+    @include m.flex-box(center,row);
+    position:absolute;
+    bottom:-5%;
+}
+
+.add {
+    width:50px;
+    height:50px;
+    cursor: pointer;
+    background-color:v.$purple;
+    border-radius:50%;
+    @include m.flex-box(center, row);
+    box-shadow: 10px 10px 48px 3px rgba(108,92,231,0.50);
+    -webkit-box-shadow: 10px 10px 48px 3px rgba(108,92,231,0.50);
+    -moz-box-shadow: 10px 10px 48px 3px rgba(108,92,231,0.50);
+
+    .add-icon {
+        color:#ffffff;
+        font-size:1.5rem;
+    }
+}
+
+.contact-list a {
+    width:80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.main-container .contact-list {
+    width:100%;
+    height:auto;
+    padding-bottom:20px;
+    margin-bottom:20px;
+    @include m.flex-box(space-between, row);
+    border-bottom:1px solid grey;
+}
+
+.contact-list-box {
+    width:100%;
+    @include m.flex-box(space-between, row);
+
+    .contact-img {
+        width:50px;
+        height:50px;
+        background-color: #fbc531;
+        border-radius:50%;
+        @include m.flex-box(center, row);
+
+        img {
+            width:40px;
+            height:40px;
+        }
+    }
+
+    .contact {
+        width:70%;
+
+        h2 {
+            color:#000000;
+        }
+
+        p {
+            color:grey;
+            margin-top:5px;
+        }
+    }
+}
+
+.contact-list .update-box {
+    width:14%;
+    @include m.flex-box(space-between, row);
+
+    .edit {
+        color:grey;
+        cursor: pointer;
+    }
+
+    .delete {
+        color:v.$orange;
+        cursor: pointer;
+    }
+}
