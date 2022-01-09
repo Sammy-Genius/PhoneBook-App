@@ -32,6 +32,7 @@
     z-index: 3000;
 
     @media screen and (max-width: v.$phone) {
+        width:360px;
         height:700px;
     }
 }
